@@ -62,8 +62,7 @@ public class Components  extends JPanel {
         scol.add("Magenta");
 
 
-        //b.setBounds(20,100,95,30);
-        //gbc.fill = GridBagConstraints.HORIZONTAL;
+        
         setLayout(new GridBagLayout());
         gbc.gridx = 0;
         gbc.gridy = 0;
@@ -101,7 +100,6 @@ public class Components  extends JPanel {
         messageBox.setEditable(false);
         gbc.insets = new Insets(1, 1, 1, 1);
         messageBox.setBackground(Color.GRAY);
-        //this.setMessageBox(" ");
         this.add(messageBox,gbc);
 
         gbc.ipady -= 50;
@@ -110,7 +108,6 @@ public class Components  extends JPanel {
         gbc.insets = new Insets(1, 1, 1, 1);
         gbc.gridwidth = 5;
         chatText = new JTextField();
-        //textField.setText("Fds");
         this.add(chatText,gbc);
 
         submit = new JButton("Send");
@@ -118,7 +115,6 @@ public class Components  extends JPanel {
         gbc.gridwidth = 1;
         this.add(submit,gbc);
 
-        //chatText.setEditable(false);
 
 
 
@@ -143,10 +139,6 @@ public class Components  extends JPanel {
                     lineChoose2 = false;
                 }
                 else if (textChoose){
-                   /* JTextArea jTextArea = new JTextArea("TEXT");
-                    jTextArea.setBounds(x,y,200,50);
-                    jTextArea.setEditable(true);
-                    textAreas.add(jTextArea);*/
                     JTextField jTextField = new JTextField("TEXT");
                     jTextField.setBounds(x,y,100,50);
 
@@ -217,9 +209,7 @@ public class Components  extends JPanel {
         Color color = colour;
         Graphics2D g2 = (Graphics2D) graphics;
         g2.setColor(color);
-        //
-        /*graphics2D.setStroke(new BasicStroke(20));
-        graphics2D.drawLine(0,0,400,400);*/
+       
 
         for (int i = 0; i < circlePoints.size();i++){
             g2.setColor(circlePoints.get(i).getColor());
@@ -242,7 +232,7 @@ public class Components  extends JPanel {
 
     public void createTextF(){
         for (int i = 0; i < textAreas.size();i++){
-            //textAreas.get(i).setEditable(true);
+
             this.add(textAreas.get(i).getTextField());
         }
     }
